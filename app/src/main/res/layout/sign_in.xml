@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:paddingTop="40dp"
+        android:text="안녕하세요!\n휴대폰 번호로 가입해주세요."
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:text="휴대폰 번호는 안전하게 보관되며 이웃들에게 공개되지 않아요."
+        android:textColor="#2c2c2c" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <EditText
+            android:id="@+id/idEdtPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/edittext_bord"
+            android:ems="20"
+            android:maxLength="10"
+            android:layout_marginBottom="10dp"
+            android:hint="휴대폰 번호(- 없이 숫자만 입력)"
+            android:inputType="numberSigned"
+            android:padding="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/idBtnGetOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="인증문자 받기"
+        android:textColor="#bdbebd"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edittext_bord"
+        android:ems="20"
+        android:maxLength="6"
+        android:layout_marginBottom="10dp"
+        android:hint="인증번호 입력 (6자리)"
+        android:inputType="numberSigned"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/idBtnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="인증하기"
+        android:textColor="#cacaca"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

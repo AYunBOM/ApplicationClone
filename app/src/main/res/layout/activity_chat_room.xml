@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".chat_room.chat_room_activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_layout">
+        <ImageButton
+            android:layout_margin="10dp"
+            android:id="@+id/btn_back"
+            android:scaleY=".8"
+            android:scaleX=".8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:src="@drawable/chat_back_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/other_name_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="가나다라마"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                android:scaleY=".8"
+                android:scaleX=".8"
+                android:id="@+id/btn_call"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:src="@drawable/chat_call_btn"/>
+            <ImageButton
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                android:scaleY=".8"
+                android:scaleX=".8"
+                android:id="@+id/btn_set_chat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/chat_setting_btn" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/border_layout"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/chat_room_imgv"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/chat_img"/>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/chat_room_title"
+                android:layout_gravity="center_vertical"
+                android:text="제목"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/chat_room_price"
+                android:layout_gravity="center_vertical"
+                android:text="10000원"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="1">
+        <ImageButton
+            android:id="@+id/Btn_add_chat"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:src="@drawable/chat_add_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/Edit_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_edit_chat"
+            android:layout_weight="1"
+            android:hint="  메시지 보내기"
+            android:textColorHint="#4B000000"/>
+        <ImageButton
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/Btn_send"
+            android:src="@drawable/chat_send_btn"
+            android:layout_width="80dp"
+            android:scaleX=".8"
+            android:scaleY=".8"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</LinearLayout>
